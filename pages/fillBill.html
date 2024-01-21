@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GigaBill</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <link rel="stylesheet" href="/styles/FillBill.css" />
+    <!-- <link rel="stylesheet" href="/styles/App.css" /> -->
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <div class="container" id="Home">
+        <nav>
+
+            <label class="logo"><img src="/img/logo.png" alt="" srcset="">
+                GigaBill</label>
+
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <li><a class="active" href="#Home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="section-1">
+                <div class="MainText">
+                    <div class="text">
+                        <div class="name">
+                            <a>Let's Get Your</a>
+                            <h1>
+                                Electricity Bill <b style="color: #00b7ff">Payment</b> Done!
+                            </h1>
+                        </div>
+                    </div>
+                    <p style="color: #7e7e7ef6">
+                        Simplify your life with GigaBill - the hassle-free solution for online electrical bill payments.
+                        Say
+                        goodbye to queues and complexities, and manage your bills effortlessly from home. </p>
+                </div>
+
+                <div class="WomanImg">
+                    <img src="/img/page2.svg" alt="" srcset="" />
+                </div>
+            </div>
+            <div class="section-2">
+                <div class="service">
+                    <h2>Electricity Provider</h2>
+                    <div class="service-card">
+                        <div class="card">
+                            <div class="img">
+                                <img src="/img/RELI.webp" alt="" srcset="" />
+                            </div>
+
+                            <a href="./fillBill.html">Adani Electricity Mumbai Limited</a>
+                        </div>
+                        <div class="card">
+                            <div class="img">
+                                <img src="/img/BEST.webp" alt="" srcset="" />
+                            </div>
+
+                            <a href="./fillBill.html">BEST Mumbai</a>
+                        </div>
+                        <div class="card">
+                            <div class="img">
+                                <img src="/img/MAHA.webp" alt="" srcset="" />
+                            </div>
+
+                            <a href="./fillBill.html">Mahavitaran Maharashtra State Electricity (MSEDCL)</a>
+                        </div>
+                        <div class="card">
+                            <div class="img">
+                                <img src="/img/TATA.webp" alt="" srcset="" />
+                            </div>
+
+                            <a href="./fillBill.html">Tata Power - Mumbai</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-3">
+                <form id="paymentForm" onsubmit="FormSubmit(event)">
+                    <h2>Pay Electricity Bill</h2>
+                    <div class=" MainInput">
+                        <div class="input">
+                            <p>State</p>
+                            <input required id="State" type="text" name="State " placeholder="State " />
+                        </div>
+                        <div class="input">
+                            <p>District</p>
+                            <input required id="District" type="text" name="District " placeholder="District " />
+                        </div>
+                        <div class="input">
+                            <p>Street Address</p>
+                            <input required id="StreetAddress" type="text" name="Street "
+                                placeholder="Street Address " />
+                        </div>
+                        <div class="input">
+                            <p>Pin Code</p>
+                            <input maxlength="6" required id="PinCode" type="number" name="PinCode "
+                                placeholder="Pin code " />
+                        </div>
+
+
+                        <div class="input">
+                            <p>Meter Id</p>
+                            <input maxlength="10" required id="MeterId" type="number" name="MeterId "
+                                placeholder="MeterId " />
+                        </div>
+                        <div class="input">
+                            <p>Meter Unit</p>
+                            <input maxlength="4" required id="MeterUnit" type="number" name="MeterUnit "
+                                placeholder="Meter Unit " />
+                        </div>
+
+                        <div class="input">
+                            <p>Consumer Name</p>
+                            <input required id="ConsumerName" type="text" name="ConsumerName "
+                                placeholder="Consumer Name " />
+                        </div>
+                        <div class="input">
+                            <p>Contact Numbers</p>
+                            <input maxlength="10" required id="ContactNumbers" type="number" name="ContactNumbers "
+                                placeholder="Contact Number " />
+                        </div>
+                        <div class="input">
+                            <p>Contact Email</p>
+                            <input required id="ContactEmail" type="email" name="ContactEmail "
+                                placeholder="Contact Email " />
+                        </div>
+                        <div class="input">
+                            <p>Electricity Provider</p>
+                            <select required name="ElectricityProvider" id="ElectricityProvider">
+                                <option value="Adani Electricity Mumbai Limited">
+                                    Adani Electricity Mumbai Limited
+                                </option>
+                                <option value="">BEST Mumbai</option>
+                                <option value="Mahavitaran Maharashtra State Electricity (MSEDCL)">
+                                    Mahavitaran Maharashtra State Electricity (MSEDCL)
+                                </option>
+                                <option value="TataPower-Mumbai">Tata Power - Mumbai</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="Pay" class="btn">Pay Here</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <p>Copyright © 2023 <b>GigaBill</b>. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+<script src="../scripts/BillForm.js"></script>
+<script>
+    document.querySelectorAll('input[type="number"]').forEach(input => {
+        input.oninput = () => {
+            if (input.value.length > input.maxLength) input.value = input.value.slice(0, input.maxLength)
+        };
+    })
+</script>
+
+</html>

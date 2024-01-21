@@ -1,0 +1,392 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  overflow: hidden;
+  padding-left: 3pc;
+  padding-right: 3pc;
+}
+/* =================== nav bar ===================*/
+
+nav {
+  display: flex;
+  /* background: #0082e6; */
+  height: 80px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+label.logo {
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  line-height: 80px;
+  font-weight: bold;
+}
+label.logo img {
+  width: 40px;
+}
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: rgb(0, 0, 0);
+
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+a.active,
+a:hover {
+  /* background: #1b9bff; */
+  color: rgb(0, 183, 255);
+  transition: 0.5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    display: flex;
+    font-size: 30px;
+    /* padding-left: 50px; */
+    align-items: center;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 11111;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+nav .text ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  color: black;
+}
+
+nav .text ul li a:hover {
+  color: rgb(0, 183, 255);
+}
+/* =================== nav bar ===================*/
+/* =================== section ===================*/
+
+section {
+  display: flex;
+  padding: 10px;
+  gap: 2pc;
+  flex-direction: column;
+}
+/* section-1 */
+.section-1 {
+  display: flex;
+  gap: 2pc;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-1 .MainText {
+  flex: 1 1;
+  gap: 2pc;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-1 .MainText p {
+  color: #434141;
+}
+
+.section-1 .text {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.section-1 .text img {
+  width: 50px;
+  flex: 1 1;
+}
+
+.section-1 .text .name a {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.section-1 .text .name h1 {
+  font-size: 55px;
+  color: #535353;
+}
+
+.section-1 .WomanImg {
+  display: flex;
+  flex: 1 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-1 .WomanImg img {
+  width: 370px;
+}
+/* section-2 */
+
+.section-2 .service {
+  padding-bottom: 2pc;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-2 .service .service-card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.section-2 .service .card {
+  gap: 0.5rem;
+  display: flex;
+  padding: 10px;
+  border: 0.1px solid #00000014;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  margin: 0.5rem;
+  border-radius: 1rem;
+}
+
+.section-2 .service .card:hover {
+  box-shadow: 0px 3px 17px -6px #43434342;
+}
+
+.section-2 .service .card .img img {
+  width: 36px;
+}
+
+.section-2 .service .card h2 {
+  font-weight: 700;
+}
+
+.section-2 .service .card p {
+  color: gray;
+}
+
+.section-2 .service .card a {
+  text-decoration: none;
+  color: #000;
+}
+
+.section-2 .service .card a:hover {
+  color: #00b7ff;
+}
+/* section-3  */
+.section-3 form {
+  display: flex;
+  gap: 1pc;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.section-3 form .MainInput {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2pc;
+  justify-content: space-around;
+}
+
+.section-3 form .MainInput .input {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.section-3form .MainInput .input p {
+  font-size: 13px;
+  font-weight: 500;
+  color: #4d4b4b;
+}
+
+.section-3 form .MainInput .input input {
+  width: 20pc;
+  font-size: 15px;
+  padding: 7px;
+  border-radius: 4px;
+  border: 1px solid #8080806b;
+  outline: none;
+}
+.section-3 form .MainInput .input #ElectricityProvider {
+  padding: 9px;
+  border-radius: 5px;
+  border: 1px solid #80808042;
+  background: transparent;
+  outline: none;
+}
+.section-3 form .btn {
+  padding: 9px;
+  background-color: #1194ed;
+  width: max-content;
+  /* width: 13pc; */
+  display: flex;
+  font-size: 15px;
+  color: wheat;
+  font-weight: 500;
+  border-radius: 7px;
+  cursor: pointer;
+  justify-content: center;
+  border: none;
+}
+/* =================== section ===================*/
+/* =================== footer ===================*/
+footer {
+  /* position: absolute; */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  padding: 5px;
+  font-weight: 600;
+}
+footer p b {
+  color: rgb(0, 140, 255);
+}
+@media (max-width: 768px) {
+  footer {
+    font-size: 12px;
+  }
+}
+/* =================== footer ===================*/
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 2pc;
+    padding-right: 2pc;
+  }
+}
+@media (max-width: 794px) {
+  .container {
+    padding-left: 1pc;
+    padding-right: 1pc;
+  }
+}
+
+@media (max-width: 425px) {
+  .section-3 form .MainInput {
+    justify-content: flex-start;
+  }
+  .section-1 .WomanImg {
+    opacity: 0.3;
+    display: none;
+  }
+  .container {
+    padding-left: 0.5pc;
+    padding-right: 0.5pc;
+  }
+}
+@media (max-width: 368px) {
+  .section-1 .text .name h1 {
+    font-size: 30px;
+    color: #535353;
+  }
+  .section-1 .MainText p {
+    font-size: 14px;
+  }
+  .section-3 form .MainInput .input input {
+    width: 90%;
+  }
+}
+@media (max-width: 320px) {
+  .section-3 form .MainInput .input input {
+    width: 16pc;
+  }
+  section {
+    padding: 7px;
+  }
+  .section-1 .text .name h1 {
+    font-size: 2.5rem;
+  }
+  .section-1 .WomanImg img {
+    width: 220px;
+  }
+  .section-3 form .MainInput {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2pc;
+    justify-content: space-between;
+  }
+  .section-2 .service .service-card {
+    justify-content: space-between;
+  }
+  .section-3 form .MainInput {
+    justify-content: space-between;
+  }
+}

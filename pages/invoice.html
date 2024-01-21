@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GigaBill</title>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="invoice" id="invoice">
+            <div class="invoiceTop">
+                <div class="logo">
+                    <img width="40px" src="/img/logo.png" alt="" srcset="" />
+                    <a>GigaBill</a>
+                </div>
+                <h1>INVOICE</h1>
+            </div>
+            <div class="borderBox"></div>
+            <div class="top">
+                <div class="AsideNo1">
+                    <div class="aside">
+                        <p>Meter Id</p>
+                        <p>Name</p>
+                        <p>Address</p>
+                        <p>Contact Numbers</p>
+                        <p>Contact Email</p>
+                    </div>
+                    <div class="aside">
+                        <span id="MeterId">Not enter</span>
+                        <span id="ConsumerName">Not enter</span>
+                        <p id="Address">
+                            <span id="State">Not enter</span>
+                            <span id="District">Not enter</span>
+                            <span id="StreetAddress">Not enter</span>
+                            <span id="PinCode">Not enter</span>
+                        </p>
+                        <span id="ContactNumbers">Not enter</span>
+                        <span id="ContactEmail">Not enter</span>
+                    </div>
+                </div>
+
+                <div class="AsideNo2">
+                    <div class="aside">
+                        <p>Date</p>
+                        <p>Bill Unit</p>
+                        <p>Electricity Provider</p>
+                    </div>
+                    <div class="aside">
+                        <span id="Dates">Not enter</span>
+                        <span id="MeterUnit">Not enter</span><span id="ElectricityProvider"> Not enter</span>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="center">
+                <p>Total Unit <span id="TotalUnit">Not enter</span></p>
+                <p>Unit Rate <span id="UnitRate">Not enter</span></p>
+                <p>Total Amount <span id="TotalAmountS">Not enter</span></p>
+            </div>
+            <hr />
+            <div class="bottom">
+                <p style="display: flex; gap: 20px; font-size: 25px; font-weight: 800">
+                    Total Amount
+                    <span style="color: #00b7ff" id="TotalAmount">Not enter</span>
+                </p>
+                <p style="display: flex; gap: 20px">
+                    Payment Date <span id="PaymentDate">Not enter</span>
+                </p>
+                <p style="display: flex; gap: 20px">
+                    Payment Id <span id="PaymentId">Not enter</span>
+                </p>
+                <p>
+                    Payment Instructions: Kindly remit the total amount due via check to the address listed above or
+                    make an online payment through our website at <b style="color: #444444">GigaBill.com</b>
+                </p>
+            </div>
+            <div class="borderBox"></div>
+            <p>Thank you for payment!</p>
+        </div>
+    </div><button id="generatePdfButton">Generate PDF</button>
+
+</body>
+<script src="../scripts/Invoice.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script>
+    function exportImg() {
+        var invoice = document.getElementById("invoice")
+        var body = document.querySelectorAll("body")[0]
+        console.log(invoice.innerHTML);
+        body.innerHTML = invoice.innerHTML
+        setTimeout(() => {
+            window.print()
+        }, 2000);
+    } 
+    exportImg()
+</script>
+<script>
+    document.getElementById('generatePdfButton').addEventListener('click', function () {
+        // Create a new jsPDF instance
+        var pdf = new jsPDF();
+
+        // Add content to the PDF
+        pdf.text(20, 20, 'Your PDF Content Goes Here');
+
+        // Save the PDF
+        pdf.save('generated_pdf.pdf');
+    });
+</script>
+
+</html>
