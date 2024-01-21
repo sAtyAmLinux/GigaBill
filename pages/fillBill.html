@@ -8,7 +8,7 @@
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <link rel="stylesheet" href="/styles/FillBill.css" />
     <!-- <link rel="stylesheet" href="/styles/App.css" /> -->
- 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <div class="container" id="Home">
+    <div class="container">
         <nav>
 
             <label class="logo"><img src="/img/logo.png" alt="" srcset="">
@@ -29,14 +29,13 @@
                 <i class="fas fa-bars"></i>
             </label>
             <ul>
-                <li><a class="active" href="#Home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a class="active" href="/index.html">Home</a></li>
                 <li><a href="#Services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+
             </ul>
         </nav>
         <section>
-            <div class="section-1">
+            <div class="section-1" data-aos="fade-up">
                 <div class="MainText">
                     <div class="text">
                         <div class="name">
@@ -59,7 +58,8 @@
             <div class="section-2">
                 <div class="service">
                     <h2>Electricity Provider</h2>
-                    <div class="service-card">
+                    <div class="service-card" data-aos="fade-up"
+                    data-aos-duration="2000">
                         <div class="card">
                             <div class="img">
                                 <img src="/img/RELI.webp" alt="" srcset="" />
@@ -94,7 +94,8 @@
             <div class="section-3">
                 <form id="paymentForm" onsubmit="FormSubmit(event)">
                     <h2>Pay Electricity Bill</h2>
-                    <div class=" MainInput">
+                    <div id="Services" class=" MainInput" data-aos="fade-up"
+                    data-aos-duration="1000">
                         <div class="input">
                             <p>State</p>
                             <input required id="State" type="text" name="State " placeholder="State " />
@@ -165,6 +166,10 @@
         </footer>
     </div>
 </body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 <script src="../scripts/BillForm.js"></script>
 <script>
     document.querySelectorAll('input[type="number"]').forEach(input => {
