@@ -12,6 +12,9 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 
@@ -33,7 +36,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="main-content">
+        <div data-aos="fade-up" class="main-content">
             <div class="text">
                 <h1>
                     Easy Electricity Bill
@@ -56,22 +59,22 @@
         <div class="main">
             <div id="Services" class="service">
                 <h2>Electricity Provider</h2>
-                <div class="service-card">
-                    <div class="card">
+                <div data-aos="fade-up" data-aos-duration="1000" class="service-card">
+                    <div data-aos-duration="1000" data-aos="fade-right" class="card">
                         <div class="img">
                             <img src="/img/RELI.webp" alt="" srcset="" />
                         </div>
 
                         <a href="./pages/fillBill.html">Adani Electricity Mumbai Limited</a>
                     </div>
-                    <div class="card">
+                    <div data-aos-duration="1000" data-aos="fade-right" class="card">
                         <div class="img">
                             <img src="/img/BEST.webp" alt="" srcset="" />
                         </div>
 
                         <a href="./pages/fillBill.html">BEST Mumbai</a>
                     </div>
-                    <div class="card">
+                    <div data-aos-duration="1000" data-aos="fade-left" class="card">
                         <div class="img">
                             <img src="/img/MAHA.webp" alt="" srcset="" />
                         </div>
@@ -79,7 +82,7 @@
                         <a href="./pages/fillBill.html">Mahavitaran Maharashtra State Electricity (MSEDCL)</a>
                     </div>
 
-                    <div class="card">
+                    <div data-aos-duration="1000" data-aos="fade-left" class="card">
                         <div class="img">
                             <img src="/img/TATA.webp" alt="" srcset="" />
                         </div>
@@ -88,7 +91,7 @@
                     </div>
                 </div>
             </div>
-            <div class="electrical-Provider">
+            <div data-aos="fade-up" data-aos-duration="2000" class="electrical-Provider">
                 <div class="text">
                     <h2>Electricity Board</h2>
                     <p>
@@ -106,22 +109,22 @@
             </div>
             <section>
                 <div class="section-main">
-                    <div class="section-1">
+                    <div data-aos="fade-right" data-aos-duration="2500" class="section-1">
                         <h1>Kokila</h1>
                         <p>Thanks.It is vary nice platform to pay the electricity bill</p>
                     </div>
-                    <div class="section-1">
+                    <div data-aos="fade-left" data-aos-duration="2500" class="section-1">
                         <h1>Kokila</h1>
                         <p>Thanks.It is vary nice platform to pay the electricity bill</p>
                     </div>
                 </div>
-                <div class="section-2">
+                <div data-aos="zoom-in" data-aos-duration="2500" class="section-2">
                     <h1>Customers</h1>
                     <p>We have 14 Customers and 12 accounts</p>
                 </div>
             </section>
             <div id="about">
-                <div class="top">
+                <div class="top" data-aos="fade-right" data-aos-duration="2500">
                     <h1>About GigaBill</h1>
                     <p>
                         Welcome to <b>GigaBill</b>, your trusted online payment and e-bill
@@ -130,7 +133,7 @@
                         convenient and secure.
                     </p>
                 </div>
-                <div class="center">
+                <div class="center" data-aos="fade-left" data-aos-duration="2500">
                     <div class="Mission">
                         <h1>Our Mission</h1>
                         <p>
@@ -171,7 +174,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="contact" class="contactUs">
+                <div id="contact" data-aos="fade-right" data-aos-duration="2500" class="contactUs">
                     <h1>Contact Us</h1>
                     <p>
                         Have questions or need assistance? Our customer support team is
@@ -189,6 +192,9 @@
         </footer>
     </div>
 </body>
+<script>
+    AOS.init();
+</script>
 <script src="./scripts/App.js"></script>
 
 </html>
