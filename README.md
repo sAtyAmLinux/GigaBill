@@ -2,6 +2,8 @@
 
 Gigabill is a simple electricity bill system designed to manage and calculate electricity bills for users. This system provides a user-friendly interface to input and track electricity consumption, generating accurate bills based on predefined rates.
 
+#Link - https://satyamlinux.github.io/GigaBill/
+
 ## Features
 
 - **User Management:** Register and manage user accounts with individual details.
