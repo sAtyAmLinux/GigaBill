@@ -16,10 +16,6 @@ Gigabill is a simple electricity bill system designed to manage and calculate el
 
 These instructions will help you set up the Gigabill project on your local machine for development and testing purposes.
 
-### Prerequisites
-
-- Node.js and npm installed
-- MongoDB installed and running
 
 ### Installation
 
