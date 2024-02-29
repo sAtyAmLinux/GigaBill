@@ -133,11 +133,9 @@ a:hover {
   }
 
   nav ul li a:hover > ul {
-left: 0;
-display: none !important;
+    left: 0;
+    display: none !important;
   }
-
-
 }
 
 nav .text ul li a {
