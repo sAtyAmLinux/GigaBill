@@ -71,4 +71,6 @@ function FormSubmit(event) {
   var rzp = new Razorpay(options);
   console.log(formData);
   rzp.open();
+
 }
+selectImage()
