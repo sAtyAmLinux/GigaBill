@@ -3,16 +3,17 @@
 }
 
 .container {
-  padding-left: 1pc;
-  padding-right: 1pc;
-  height: 100vh;
+  padding: 1pc;
+  /* padding-left: 1pc; */
+  /* padding-right: 1pc; */
+  /* height: 100vh; */
 }
 
 .invoice {
-  width: max-content;
-  padding: 8px;
+  width: 100%;
+  padding: 16px;
   display: flex;
-  height: 100vh;
+  height: max-content;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -94,4 +95,17 @@ hr {
 /* =================== center of invoice ===================*/
 span {
   color: #9e9e9e;
+}
+.bottom {
+  width: max-content;
+  gap: 3rem;
+  display: flex;
+}
+
+.bottom .text {
+  width: 25%;
+}
+
+.bottom .img img {
+  height: 20pc;
 }
