@@ -114,6 +114,8 @@
                   required
                   id="State"
                   type="text"
+                  pattern="[A-Za-z]+"
+                  title="Enter text only"
                   name="State "
                   placeholder="State "
                 />
@@ -124,6 +126,8 @@
                   required
                   id="District"
                   type="text"
+                  pattern="[A-Za-z]+"
+                  title="Enter text only"
                   name="District "
                   placeholder="District "
                 />
@@ -135,28 +139,31 @@
                   id="StreetAddress"
                   type="text"
                   name="Street "
+                  title="Enter text only"
                   placeholder="Street Address "
                 />
               </div>
               <div class="input">
                 <p>Pin Code</p>
                 <input
-                  maxlength="6"
                   required
                   id="PinCode"
-                  type="number"
-                  name="PinCode "
-                  placeholder="Pin code "
+                  name="PinCode"
+                  type="text"
+                  pattern="\d{6}"
+                  title="enter 6 length of number"
+                  placeholder="Pin code"
                 />
               </div>
 
               <div class="input">
                 <p>Meter Id</p>
                 <input
-                  maxlength="10"
+                  type="text"
+                  pattern="\d{12}"
+                  title="enter 12 length of number"
                   required
                   id="MeterId"
-                  type="number"
                   name="MeterId "
                   placeholder="MeterId "
                 />
@@ -175,7 +182,7 @@
 
               <div class="input">
                 <p>Choose Image</p>
-                <input id="fileInput" type="file" accept="image/*" />
+                <input id="fileInput" required type="file" accept="image/*" />
               </div>
               <div class="input">
                 <p>Consumer Name</p>
@@ -183,6 +190,8 @@
                   required
                   id="ConsumerName"
                   type="text"
+                  pattern="[A-Za-z\s]+"
+                  title="Enter text only"
                   name="ConsumerName "
                   placeholder="Consumer Name "
                 />
@@ -190,10 +199,10 @@
               <div class="input">
                 <p>Contact Numbers</p>
                 <input
-                  maxlength="10"
                   required
                   id="ContactNumbers"
-                  type="number"
+                  pattern="\d{10}"
+                  title="enter 10 length of number"
                   name="ContactNumbers "
                   placeholder="Contact Number "
                 />
@@ -228,9 +237,7 @@
                 </select>
               </div>
             </div>
-            <button id="Pay"  class="btn">
-              Pay Here
-            </button>
+            <button id="Pay" class="btn">Pay Here</button>
           </form>
         </div>
       </section>
