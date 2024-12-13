@@ -22,7 +22,7 @@ These instructions will help you set up the Gigabill project on your local machi
 1. Clone the repository:
 
    ```bash
-   git clone https://satyamlinux.github.io/GigaBill/
+   git clone https://github.com/sAtyAmSDev/GigaBill
 
 
    cd gigabill
